@@ -7,25 +7,24 @@ let candidateName;
 
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question=input.question("Who was the first American woman in space?");
-let correctAnswer="Sally Ride";
+let correctAnswer= "Sally Ride";
 let candidateAnswer; 
-
-if (candidateAnswer === correctAnswer); {
+if (candidateAnswer = correctAnswer) {
   console.log("That is correct!");
-} else 
-console.log("Sorry, that is not correct.");
+} else if (candidateAnswer !== correctAnswer) {
+  console.log("Sorry, that is not correct.");
+}
 
 let questions;
 let correctAnswers;
 let candidateAnswers;
 
-
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 
-} 
+}
 const name = input.question("What is your name?");
-console.log(" Hello," + candidateName + "!");
+
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
