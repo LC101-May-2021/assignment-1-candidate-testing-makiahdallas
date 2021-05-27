@@ -23,8 +23,6 @@ function askQuestion() {
 
 let question = input.question("Who was the first American woman in space?");
 
-  
-
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
@@ -47,6 +45,7 @@ if (candidateAnswer === correctAnswer) {
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
+  console.log(`Hello, ${candidateName}!`);
   
   askQuestion();
   gradeQuiz(this.candidateAnswers);
