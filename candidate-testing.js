@@ -22,6 +22,12 @@ function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
 let question = input.question("Who was the first American woman in space?");
+
+  
+
+function gradeQuiz(candidateAnswers) {
+
+  // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 let correctAnswer = "Sally Ride" ; 
 let candidateAnswer; 
 
@@ -31,12 +37,6 @@ if (candidateAnswer === correctAnswer) {
 (candidateAnswer !== correctAnswer) {
   console.log("Sorry, that is not correct.");
   } 
-  
-
-function gradeQuiz(candidateAnswers) {
-
-  // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
 
   let grade;
   
