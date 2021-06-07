@@ -10,26 +10,22 @@ let question="Who was the first American woman in space?";
 let correctAnswer="Sally Ride";
 let candidateAnswer;
 let questions = [
-  "Who was the first American woman in space? ", 
+  "Who was the first American woman in space? ",
   "True or false: 5 kilometer == 5000 meters? ",
-  "(5 + 3)/2 * 10 = ",
-  "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ", 
+  "(5 + 3)/2 * 10 = ? ",
+  "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ",
   "What is the minimum crew size for the ISS? "
 ];
+let correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
 
-let correctAnswers = ["Sally ride",
- "true", 
- "40",
- "trajectory",
- "3"
-];
+
 
 let candidateAnswers = [""];
 
 function askForName() {
 // TODO 1.1b: Ask for candidate's name //
   candidateName = input.question("What is your name? ");
-  console.log(`Hello, ${candidateName}! Welcome to your quiz.\nPlease answer the following questions:`);
+  console.log(`Hello, ${candidateName}! Welcome to your quiz.`);
   console.log("----------------------");
 }
 
@@ -61,20 +57,23 @@ for (let i=0; i<candidateAnswers.length; i=i+1) {
   
 //the following block checks for invalid inputs
 //while (candidateAnswers[i].toLowerCase() === undefined || candidateAnswers[i].toLowerCase() === null) {
-//  console.log("Please enter valid answers.");
+//console.log("Please enter valid answers.");
 //}
 }
 grade = (correctQuestions / questions.length) *100;
 
 if (grade >= 80) { 
-  console.log("***You PASSED! Good job.***"); }
+  console.log(`>>> OVERALL GRADE: ${grade}% (${correctQuestions} out of 5 responses correct)<<<`);
+  console.log(">>> STATUS: PASSED <<<"); }
   else {
-  console.log("***Sorry, you FAILED.***");
+  console.log(`>>> OVERALL GRADE: ${grade}% (${correctQuestions} out of 5 responses correct)<<<`);
+  console.log(">>> STATUS: FAILED <<<");
 }
 
-console.log(`OVERALL GRADE: ${grade} %`);
 return grade;
 }
+
+
 
 function runProgram() {
   // TODO 1.1c: Ask for candidate's name //
