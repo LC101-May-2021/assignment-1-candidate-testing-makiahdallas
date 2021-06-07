@@ -19,7 +19,6 @@ let questions = [
 let correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
 
 
-
 let candidateAnswers = [""];
 
 function askForName() {
@@ -31,8 +30,7 @@ function askForName() {
 
 function askQuestion() {
 // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-  for (let i=0; i<questions.length; i++) {
-//input.question(questions[i]); 
+  for (let i=0; i<questions.length; i++) { 
   candidateAnswers[i] = input.question(questions[i]);
   if (candidateAnswers[i].toUpperCase().trim(" ") === correctAnswers[i].toUpperCase().trim(" ")) {
   console.log(`Your Answer: ${candidateAnswers[i]} is correct!
@@ -48,18 +46,12 @@ function gradeQuiz() {
 let correctQuestions=0;
 let grade; 
 
-//this block is for scoring
 for (let i=0; i<candidateAnswers.length; i++) {
   if (candidateAnswers[i].toUpperCase() === correctAnswers[i].toUpperCase()) {
   correctQuestions++;  
-  } 
-  
-//the following block checks for invalid inputs
-//while (candidateAnswers[i].toLowerCase() === undefined || candidateAnswers[i].toLowerCase() === null) {
-//console.log("Please enter valid answers.");
-//}
+  } grade = (correctQuestions / candidateAnswers.length) *100;
 }
-grade = (correctQuestions / candidateAnswers.length) *100;
+
 
 if (grade >= 80) { 
   console.log(`>>> OVERALL GRADE: ${grade}% (${correctQuestions} out of ${candidateAnswers.length} responses correct)<<<`);
@@ -71,7 +63,6 @@ if (grade >= 80) {
 
 return grade;
 }
-
 
 
 function runProgram() {
