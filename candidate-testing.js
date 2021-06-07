@@ -39,7 +39,8 @@ function askQuestion() {
 //input.question(questions[i]); 
   candidateAnswers[i] = input.question(questions[i]);
   if (candidateAnswers[i].toLowerCase().trim(" ") === correctAnswers[i].toLowerCase().trim(" ")) {
-  console.log(`Your Answer: ${candidateAnswers[i]} is correct!`);
+  console.log(`Your Answer: ${candidateAnswers[i]} is correct!
+  Correct Answer: ${correctAnswers[i]}`);
   } else { 
   console.log(`Sorry, ${candidateAnswers[i]} is not correct.\nCorrect Answer: ${correctAnswers[i]}`); }
 }
