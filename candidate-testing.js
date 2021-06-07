@@ -1,7 +1,7 @@
 const input = require('readline-sync');
 
 //TODO 2: modify your quiz app to ask 5 questions
-
+// remove me
 // TODO 1.1a: Define candidateName // 
 let candidateName= "";
 
@@ -33,14 +33,13 @@ function askQuestion() {
   for (let i=0; i<questions.length; i++) { 
   candidateAnswers[i] = input.question(questions[i]);
   if (candidateAnswers[i].toUpperCase().trim(" ") === correctAnswers[i].toUpperCase().trim(" ")) {
-  console.log(`Your Answer: ${candidateAnswers[i]} is correct!
-  Correct Answer: ${correctAnswers[i]}`);
+  console.log(`Your Answer: ${candidateAnswers[i]} is correct!\nCorrect Answer: ${correctAnswers[i]}`);
   } else { 
   console.log(`Sorry, ${candidateAnswers[i]} is not correct.\nCorrect Answer: ${correctAnswers[i]}`); }
 }
 }
 
-function gradeQuiz() {
+function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly
 
 let correctQuestions=0;
@@ -60,7 +59,7 @@ if (grade >= 80) {
   console.log(`>>> OVERALL GRADE: ${grade}% (${correctQuestions} out of ${candidateAnswers.length} responses correct) <<<`);
   console.log(">>> STATUS: FAILED <<<");
 }
-
+console.log(grade);
 return grade;
 }
 
@@ -72,7 +71,7 @@ function runProgram() {
   gradeQuiz(this.candidateAnswers);
 }
 
-// Don't write any code below this line //
+// Don't write any code below this line ////
 // And don't change these or your program will not run as expected
 module.exports = {
 candidateName: candidateName,
