@@ -8,7 +8,7 @@ let candidateName= "";
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question="Who was the first American woman in space? ";
 let correctAnswer="Sally Ride";
-let candidateAnswer;
+let candidateAnswer="";
 let questions = [
   "Who was the first American woman in space? ",
   "True or false: 5 kilometer == 5000 meters? ",
