@@ -49,7 +49,7 @@ let correctQuestions=0;
 let grade; 
 
 //this block is for scoring
-for (let i=0; i<candidateAnswers.length; i=i+1) {
+for (let i=0; i<candidateAnswers.length; i++) {
   if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
   correctQuestions++;  
   } 
