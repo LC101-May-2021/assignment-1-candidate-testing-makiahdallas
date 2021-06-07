@@ -63,10 +63,10 @@ for (let i=0; i<candidateAnswers.length; i=i+1) {
 grade = (correctQuestions / questions.length) *100;
 
 if (grade >= 80) { 
-  console.log(`>>> OVERALL GRADE: ${grade}% (${correctQuestions} out of 5 responses correct)<<<`);
+  console.log(`>>> OVERALL GRADE: ${grade}% (${correctQuestions} out of ${candidateAnswers.length} responses correct)<<<`);
   console.log(">>> STATUS: PASSED <<<"); }
   else {
-  console.log(`>>> OVERALL GRADE: ${grade}% (${correctQuestions} out of 5 responses correct)<<<`);
+  console.log(`>>> OVERALL GRADE: ${grade}% (${correctQuestions} out of ${candidateAnswers.length} responses correct) <<<`);
   console.log(">>> STATUS: FAILED <<<");
 }
 
