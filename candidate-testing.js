@@ -34,7 +34,7 @@ function askQuestion() {
   for (let i=0; i<questions.length; i++) {
 //input.question(questions[i]); 
   candidateAnswers[i] = input.question(questions[i]);
-  if (candidateAnswers[i].toLowerCase().trim(" ") === correctAnswers[i].toLowerCase().trim(" ")) {
+  if (candidateAnswers[i].toUpperCase().trim(" ") === correctAnswers[i].toUpperCase().trim(" ")) {
   console.log(`Your Answer: ${candidateAnswers[i]} is correct!
   Correct Answer: ${correctAnswers[i]}`);
   } else { 
@@ -50,7 +50,7 @@ let grade;
 
 //this block is for scoring
 for (let i=0; i<candidateAnswers.length; i++) {
-  if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
+  if (candidateAnswers[i].toUpperCase() === correctAnswers[i].toUpperCase()) {
   correctQuestions++;  
   } 
   
