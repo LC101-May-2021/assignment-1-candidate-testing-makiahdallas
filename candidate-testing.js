@@ -59,7 +59,7 @@ for (let i=0; i<candidateAnswers.length; i=i+1) {
 //console.log("Please enter valid answers.");
 //}
 }
-grade = (correctQuestions / questions.length) *100;
+grade = (correctQuestions / candidateAnswers.length) *100;
 
 if (grade >= 80) { 
   console.log(`>>> OVERALL GRADE: ${grade}% (${correctQuestions} out of ${candidateAnswers.length} responses correct)<<<`);
