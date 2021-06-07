@@ -49,9 +49,9 @@ let grade;
 for (let i=0; i<candidateAnswers.length; i++) {
   if (candidateAnswers[i].toUpperCase() === correctAnswers[i].toUpperCase()) {
   correctQuestions++;  
-  } grade = (correctQuestions / candidateAnswers.length) *100;
+  } 
 }
-
+grade = (correctQuestions / candidateAnswers.length) *100;
 
 if (grade >= 80) { 
   console.log(`>>> OVERALL GRADE: ${grade}% (${correctQuestions} out of ${candidateAnswers.length} responses correct)<<<`);
